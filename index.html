@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Number</title>
+  </head>
+  <body>
+    <script>
+      let randomnum = Math.floor(Math.random() * 10) + 1;
+      // range from 1 to 5
+      if (randomnum > 5) {
+        randomnum = randomnum - 5;
+      }
+      // console.log(randomnum)
+      let user = () => {
+        let attempts = 1;
+        while (true) {
+          let userip = prompt("Generate the number between 1 and 10");
+          attempts = attempts + 1;
+          if (userip == randomnum) {
+            alert(
+              `🎉Congratlations!You guessed the correct number ${randomnum} in ${attempts} attempts`
+            );
+            break;
+          } else if (userip < 5) {
+            alert("Too Low.Try Again");
+          } else  {
+            alert("Too High.Try Again");
+          }
+        }
+      };
+      user();
+    </script>
+  </body>
+</html>
+<!-- h j n m y u 
+ 
+H J N M Y U 
+
+ -->
